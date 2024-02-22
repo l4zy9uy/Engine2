@@ -35,7 +35,7 @@ bool ApplicationClass::Initialize(Display *display, Window win, int screenWidth,
     // Create and initialize the camera object.
     m_Camera = std::make_unique<CameraClass>();
 
-    m_Camera->SetPosition(0.0f, 0.0f, -5.0f);
+    m_Camera->setMPosition(glm::vec3(0.0f, 0.0f, -5.0f));
     m_Camera->Render();
 
     // Create and initialize the model object.
@@ -83,17 +83,15 @@ bool ApplicationClass::Frame(std::unique_ptr<InputClass> &Input) {
 }
 
 bool ApplicationClass::Render() {
-    float worldMatrix[16], viewMatrix[16], projectionMatrix[16];
+    glm::mat4 worldMatrix, viewMatrix, projectionMatrix;
     bool result;
 
     // Clear the buffers to begin the scene.
     m_OpenGL->BeginScene(1.0f, 1.0f, 1.0f, 1.0f);
-
     // Get the world, view, and projection matrices from the opengl and camera objects.
-    m_OpenGL->GetWorldMatrix(worldMatrix);
-    m_Camera->GetViewMatrix(viewMatrix);
-    m_OpenGL->GetProjectionMatrix(projectionMatrix);
-
+    worldMatrix = m_OpenGL->getMWorldMatrix();
+    viewMatrix = m_Camera->getMViewMatrix();
+    projectionMatrix = m_OpenGL->getMProjectionMatrix();
     // Set the color shader as the current shader program and set the matrices that it will use for rendering.
     result = m_ColorShader->SetShaderParameters(worldMatrix, viewMatrix, projectionMatrix);
     if (!result) {
@@ -102,7 +100,6 @@ bool ApplicationClass::Render() {
 
     // Render the model.
     m_Model->Render();
-
     // Present the rendered scene to the screen.
     m_OpenGL->EndScene();
 

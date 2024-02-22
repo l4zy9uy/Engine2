@@ -7,6 +7,7 @@
 //////////////////
 // MAIN PROGRAM //
 //////////////////
+
 int main()
 {
     std::unique_ptr<SystemClass> System;

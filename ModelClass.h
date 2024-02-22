@@ -7,15 +7,14 @@
 
 
 #include "OpenGLClass.h"
-
+#include <glm/vec3.hpp>
 class ModelClass {
 private:
     struct VertexType
     {
-        float x, y, z;
-        float r, g, b;
+        glm::vec3 position;
+        glm::vec3 color;
     };
-
 public:
     ModelClass();
     ModelClass(const ModelClass&);

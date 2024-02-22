@@ -11,6 +11,8 @@
 #include <cstring>
 #include <cmath>
 #include <memory>
+#include <glm/mat4x4.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 //////////////
 // TYPEDEFS //
 //////////////
@@ -84,25 +86,17 @@ public:
     void BeginScene(float, float, float, float);
     void EndScene();
 
-    void BuildIdentityMatrix(float*);
-    void BuildPerspectiveFovMatrix(float*, float, float, float, float);
-    void BuildOrthoMatrix(float*, float,  float, float, float);
+    void BuildIdentityMatrix(glm::mat4 &);
+    void BuildPerspectiveFovMatrix(glm::mat4 &, float, float, float, float);
+    void BuildOrthoMatrix(glm::mat4 &, float, float, float, float);
 
-    void GetWorldMatrix(float*);
-    void GetProjectionMatrix(float*);
-    void GetOrthoMatrix(float*);
+    const glm::mat4 &getMWorldMatrix() const;
+    const glm::mat4 &getMProjectionMatrix() const;
+    const glm::mat4 &getMOrthoMatrix() const;
 
-    void MatrixRotationX(float*, float);
-    void MatrixRotationY(float*, float);
-    void MatrixRotationZ(float*, float);
-    void MatrixTranslation(float*, float, float, float);
-    void MatrixScale(float*, float, float, float);
-    void MatrixTranspose(float*, float*);
-    void MatrixMultiply(float*, float*, float*);
-
+    void MatrixTranspose(glm::mat4 &, glm::mat4 &);
     void TurnZBufferOn();
     void TurnZBufferOff();
-
     void EnableAlphaBlending();
     void DisableAlphaBlending();
 
@@ -168,9 +162,9 @@ public:
 private:
     Display* m_display;
     Window m_hwnd;
-    float m_worldMatrix[16];
-    float m_projectionMatrix[16];
-    float m_orthoMatrix[16];
+    glm::mat4 m_worldMatrix;
+    glm::mat4 m_projectionMatrix;
+    glm::mat4 m_orthoMatrix;
     int m_screenWidth, m_screenHeight;
 };
 

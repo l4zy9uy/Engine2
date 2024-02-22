@@ -12,7 +12,6 @@ ModelClass::ModelClass(const ModelClass& other)
 {
 }
 
-
 ModelClass::~ModelClass()
 = default;
 
@@ -38,50 +37,28 @@ void ModelClass::Render()
 
 bool ModelClass::InitializeBuffers() {
     // Set the number of vertices in the vertex array.
-    m_vertexCount = 4;
+    m_vertexCount = 3;
     // Set the number of indices in the index array.
-    m_indexCount = 6;
-    auto vertices = std::make_unique<VertexType[]>(m_vertexCount);
+    m_indexCount = 3;
     auto indices = std::make_unique<unsigned int[]>(m_indexCount);
-
+    auto vertices = std::make_unique<VertexType[]>(m_vertexCount);
     // Load the vertex array with data.
-
-    // Bottom left.
-    vertices[0].x = -1.0f;  // Position.
-    vertices[0].y = -1.0f;
-    vertices[0].z =  0.0f;
-    vertices[0].r = 0.0f;  // Color.
-    vertices[0].g = 0.0f;
-    vertices[0].b = 1.0f;
-    // Top middle.
-    vertices[1].x = 1.0f;  // Position.
-    vertices[1].y = 1.0f;
-    vertices[1].z = 0.0f;
-    vertices[1].r = 0.0f;  // Color.
-    vertices[1].g = 1.0f;
-    vertices[1].b = 0.0f;
-    // Bottom right.
-    vertices[2].x =  1.0f;  // Position.
-    vertices[2].y = -1.0f;
-    vertices[2].z =  0.0f;
-    vertices[2].r = 1.0f;  // Color.
-    vertices[2].g = 0.0f;
-    vertices[2].b = 0.0f;
-    //
-    vertices[3].x = -1.0f;  // Position.
-    vertices[3].y =  1.0f;
-    vertices[3].z =  0.0f;
-    vertices[3].r = 1.0f;  // Color.
-    vertices[3].g = 0.0f;
-    vertices[3].b = 0.0f;
+    vertices[0].position = glm::vec3(-1.0f, -1.0f, 0.0f);
+    vertices[0].color = glm::vec3(0.0f, 0.0f, 1.0f);
+    vertices[1].position = glm::vec3(1.0f, 1.0f, 0.0f);
+    vertices[1].color = glm::vec3(0.0f, 1.0f, 0.0f);
+    vertices[2].position = glm::vec3(2.0f, -2.0f, 0.0f);
+    vertices[2].color = glm::vec3(1.0f, 1.0f, 0.0f);
+    /*vertices[3].position = glm::vec3(-1.0f, 1.0f, 0.0f);
+    vertices[3].color = glm::vec3(1.0f, 0.0f, 0.0f);*/
 
     // Load the index array with data.
     indices[0] = 0;  // Bottom left.
-    indices[1] = 1;  // Top middle.
-    indices[2] = 2;  // Bottom right.
-    indices[3] = 0;  // Bottom right.
+    indices[1] = 2;  // Top middle.
+    indices[2] = 1;  // Bottom right.
+    /*indices[3] = 0;  // Bottom right.
     indices[4] = 3;  // Bottom right.
-    indices[5] = 1;  // Bottom right.
+    indices[5] = 1;  // Bottom right.*/
 
     // Allocate an OpenGL vertex array object.
     m_OpenGLPtr->glGenVertexArrays(1, &m_vertexArrayId);
@@ -98,7 +75,7 @@ bool ModelClass::InitializeBuffers() {
     // Specify the location and format of the position portion of the vertex buffer.
     m_OpenGLPtr->glVertexAttribPointer(0, 3, GL_FLOAT, false, sizeof(VertexType), nullptr);
     // Specify the location and format of the color portion of the vertex buffer.
-    m_OpenGLPtr->glVertexAttribPointer(1, 3, GL_FLOAT, false, sizeof(VertexType), (unsigned char*)nullptr + (3 * sizeof(float)));
+    m_OpenGLPtr->glVertexAttribPointer(1, 3, GL_FLOAT, false, sizeof(VertexType), (unsigned char*)nullptr + (sizeof(glm::vec3)));
     // Generate an ID for the index buffer.
     m_OpenGLPtr->glGenBuffers(1, &m_indexBufferId);
     // Bind the index buffer and load the index data into it.
@@ -131,7 +108,6 @@ void ModelClass::RenderBuffers()
 {
     // Bind the vertex array object that stored all the information about the vertex and index buffers.
     m_OpenGLPtr->glBindVertexArray(m_vertexArrayId);
-
     // Render the vertex buffer using the index buffer.
     glDrawElements(GL_TRIANGLES, m_indexCount, GL_UNSIGNED_INT, nullptr);
 }

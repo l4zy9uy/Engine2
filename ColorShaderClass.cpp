@@ -4,6 +4,7 @@
 
 #include "ColorShaderClass.h"
 #include <fstream>
+#include <glm/gtc/type_ptr.hpp>
 ColorShaderClass::ColorShaderClass()
 = default;
 
@@ -263,27 +264,30 @@ void ColorShaderClass::OutputLinkerErrorMessage(unsigned int programId)
     std::cout << "Error linking shader program.  Check linker-error.txt for message." << "\n";
 }
 
-bool ColorShaderClass::SetShaderParameters(float* worldMatrix, float* viewMatrix, float* projectionMatrix)
-{
-    float tpWorldMatrix[16], tpViewMatrix[16], tpProjectionMatrix[16];
-    int location;
-
+bool ColorShaderClass::SetShaderParameters(glm::mat4 &worldMatrix, glm::mat4 &viewMatrix, glm::mat4 &projectionMatrix) {
+    glm::mat4 tpWorldMatrix(1), tpViewMatrix(1), tpProjectionMatrix(1);
 
     // Transpose the matrices to prepare them for the shader.
-    m_OpenGLPtr->MatrixTranspose(tpWorldMatrix, worldMatrix);
-    m_OpenGLPtr->MatrixTranspose(tpViewMatrix, viewMatrix);
-    m_OpenGLPtr->MatrixTranspose(tpProjectionMatrix, projectionMatrix);
+//    m_OpenGLPtr->MatrixTranspose(tpWorldMatrix, worldMatrix);
+//    m_OpenGLPtr->MatrixTranspose(tpViewMatrix, viewMatrix);
+//    m_OpenGLPtr->MatrixTranspose(tpProjectionMatrix, projectionMatrix);
+    tpWorldMatrix = glm::transpose(worldMatrix);
+    tpViewMatrix = glm::transpose(viewMatrix);
+    tpProjectionMatrix = glm::transpose(projectionMatrix);
+    /*tpWorldMatrix = worldMatrix;
+    tpViewMatrix = viewMatrix;
+    tpProjectionMatrix = projectionMatrix;*/
 
     // Install the shader program as part of the current rendering state.
     m_OpenGLPtr->glUseProgram(m_shaderProgram);
 
     // Set the world matrix in the vertex shader.
-    location = m_OpenGLPtr->glGetUniformLocation(m_shaderProgram, "worldMatrix");
+    int location = m_OpenGLPtr->glGetUniformLocation(m_shaderProgram, "worldMatrix");
     if(location == -1)
     {
         return false;
     }
-    m_OpenGLPtr->glUniformMatrix4fv(location, 1, false, tpWorldMatrix);
+    m_OpenGLPtr->glUniformMatrix4fv(location, 1, false, glm::value_ptr(tpWorldMatrix));
 
     // Set the view matrix in the vertex shader.
     location = m_OpenGLPtr->glGetUniformLocation(m_shaderProgram, "viewMatrix");
@@ -291,7 +295,7 @@ bool ColorShaderClass::SetShaderParameters(float* worldMatrix, float* viewMatrix
     {
         return false;
     }
-    m_OpenGLPtr->glUniformMatrix4fv(location, 1, false, tpViewMatrix);
+    m_OpenGLPtr->glUniformMatrix4fv(location, 1, false, glm::value_ptr(tpViewMatrix));
 
     // Set the projection matrix in the vertex shader.
     location = m_OpenGLPtr->glGetUniformLocation(m_shaderProgram, "projectionMatrix");
@@ -299,7 +303,7 @@ bool ColorShaderClass::SetShaderParameters(float* worldMatrix, float* viewMatrix
     {
         return false;
     }
-    m_OpenGLPtr->glUniformMatrix4fv(location, 1, false, tpProjectionMatrix);
+    m_OpenGLPtr->glUniformMatrix4fv(location, 1, false, glm::value_ptr(tpProjectionMatrix));
 
     return true;
 }

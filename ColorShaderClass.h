@@ -14,8 +14,7 @@ public:
 
     bool Initialize(std::shared_ptr<OpenGLClass> &);
     void Shutdown();
-
-    bool SetShaderParameters(float*, float*, float*);
+    bool SetShaderParameters(glm::mat4 &, glm::mat4 &, glm::mat4 &);
 
 private:
     bool InitializeShader(char*, char*);
