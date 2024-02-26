@@ -2,7 +2,7 @@
 // Filename: openglclass.cpp
 ////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
-#include "OpenGLClass.h"
+#include "../include/OpenGLClass.h"
 #include <glm/gtx/string_cast.hpp>
 
 OpenGLClass::OpenGLClass()
@@ -475,8 +475,4 @@ const glm::mat4 &OpenGLClass::getMProjectionMatrix() const {
 
 const glm::mat4 &OpenGLClass::getMOrthoMatrix() const {
     return m_orthoMatrix;
-}
-
-void OpenGLClass::MatrixTranspose(glm::mat4 &result, glm::mat4 &matrix) {
-    result = glm::transpose(matrix);
 }

@@ -1,3 +1,9 @@
-/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/CMakeFiles/Engine2.dir
 /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/src/CMakeFiles/glad.dir
+/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/src/CMakeFiles/total.dir
+/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/final/CMakeFiles/Engine2.dir
+/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/final/CMakeFiles/edit_cache.dir
+/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/final/CMakeFiles/rebuild_cache.dir

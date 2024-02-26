@@ -2,7 +2,7 @@
 // Created by l4zy9uy on 2/15/24.
 //
 
-#include "InputClass.h"
+#include "../include/InputClass.h"
 #include <iostream>
 
 InputClass::InputClass()

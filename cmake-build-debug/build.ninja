@@ -40,80 +40,6 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/
-# =============================================================================
-# Object build statements for EXECUTABLE target Engine2
-
-
-#############################################
-# Order-only phony target for Engine2
-
-build cmake_object_order_depends_target_Engine2: phony || CMakeFiles/Engine2.dir
-
-build CMakeFiles/Engine2.dir/main.cpp.o: CXX_COMPILER__Engine2_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/main.cpp || cmake_object_order_depends_target_Engine2
-  DEP_FILE = CMakeFiles/Engine2.dir/main.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Engine2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Engine2.dir
-
-build CMakeFiles/Engine2.dir/SystemClass.cpp.o: CXX_COMPILER__Engine2_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/SystemClass.cpp || cmake_object_order_depends_target_Engine2
-  DEP_FILE = CMakeFiles/Engine2.dir/SystemClass.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Engine2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Engine2.dir
-
-build CMakeFiles/Engine2.dir/ApplicationClass.cpp.o: CXX_COMPILER__Engine2_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/ApplicationClass.cpp || cmake_object_order_depends_target_Engine2
-  DEP_FILE = CMakeFiles/Engine2.dir/ApplicationClass.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Engine2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Engine2.dir
-
-build CMakeFiles/Engine2.dir/OpenGLClass.cpp.o: CXX_COMPILER__Engine2_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/OpenGLClass.cpp || cmake_object_order_depends_target_Engine2
-  DEP_FILE = CMakeFiles/Engine2.dir/OpenGLClass.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Engine2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Engine2.dir
-
-build CMakeFiles/Engine2.dir/InputClass.cpp.o: CXX_COMPILER__Engine2_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/InputClass.cpp || cmake_object_order_depends_target_Engine2
-  DEP_FILE = CMakeFiles/Engine2.dir/InputClass.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Engine2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Engine2.dir
-
-build CMakeFiles/Engine2.dir/ColorShaderClass.cpp.o: CXX_COMPILER__Engine2_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/ColorShaderClass.cpp || cmake_object_order_depends_target_Engine2
-  DEP_FILE = CMakeFiles/Engine2.dir/ColorShaderClass.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Engine2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Engine2.dir
-
-build CMakeFiles/Engine2.dir/ModelClass.cpp.o: CXX_COMPILER__Engine2_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/ModelClass.cpp || cmake_object_order_depends_target_Engine2
-  DEP_FILE = CMakeFiles/Engine2.dir/ModelClass.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Engine2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Engine2.dir
-
-build CMakeFiles/Engine2.dir/CameraClass.cpp.o: CXX_COMPILER__Engine2_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/CameraClass.cpp || cmake_object_order_depends_target_Engine2
-  DEP_FILE = CMakeFiles/Engine2.dir/CameraClass.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Engine2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Engine2.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Engine2
-
-
-#############################################
-# Link the executable Engine2
-
-build Engine2: CXX_EXECUTABLE_LINKER__Engine2_Debug CMakeFiles/Engine2.dir/main.cpp.o CMakeFiles/Engine2.dir/SystemClass.cpp.o CMakeFiles/Engine2.dir/ApplicationClass.cpp.o CMakeFiles/Engine2.dir/OpenGLClass.cpp.o CMakeFiles/Engine2.dir/InputClass.cpp.o CMakeFiles/Engine2.dir/ColorShaderClass.cpp.o CMakeFiles/Engine2.dir/ModelClass.cpp.o CMakeFiles/Engine2.dir/CameraClass.cpp.o | /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libGLU.so
-  FLAGS = -g
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libGLU.so
-  OBJECT_DIR = CMakeFiles/Engine2.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = Engine2
-  TARGET_PDB = Engine2.dbg
-
 
 #############################################
 # Utility command for edit_cache
@@ -138,7 +64,212 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/l4zy9uy/Desktop/opengl/Engine2/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Order-only phony target for glad
+
+build cmake_object_order_depends_target_glad: phony || src/CMakeFiles/glad.dir
+
+build src/CMakeFiles/glad.dir/glad.c.o: C_COMPILER__glad_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/src/glad.c || cmake_object_order_depends_target_glad
+  DEP_FILE = src/CMakeFiles/glad.dir/glad.c.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include/glad
+  OBJECT_DIR = src/CMakeFiles/glad.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/glad.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Link the static library src/libglad.a
+
+build src/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug src/CMakeFiles/glad.dir/glad.c.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/CMakeFiles/glad.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = src/libglad.a
+  TARGET_PDB = glad.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target total
+
+
+#############################################
+# Order-only phony target for total
+
+build cmake_object_order_depends_target_total: phony || src/CMakeFiles/total.dir
+
+build src/CMakeFiles/total.dir/ApplicationClass.cpp.o: CXX_COMPILER__total_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/src/ApplicationClass.cpp || cmake_object_order_depends_target_total
+  DEP_FILE = src/CMakeFiles/total.dir/ApplicationClass.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include
+  OBJECT_DIR = src/CMakeFiles/total.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/total.dir
+
+build src/CMakeFiles/total.dir/CameraClass.cpp.o: CXX_COMPILER__total_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/src/CameraClass.cpp || cmake_object_order_depends_target_total
+  DEP_FILE = src/CMakeFiles/total.dir/CameraClass.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include
+  OBJECT_DIR = src/CMakeFiles/total.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/total.dir
+
+build src/CMakeFiles/total.dir/ColorShaderClass.cpp.o: CXX_COMPILER__total_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/src/ColorShaderClass.cpp || cmake_object_order_depends_target_total
+  DEP_FILE = src/CMakeFiles/total.dir/ColorShaderClass.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include
+  OBJECT_DIR = src/CMakeFiles/total.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/total.dir
+
+build src/CMakeFiles/total.dir/InputClass.cpp.o: CXX_COMPILER__total_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/src/InputClass.cpp || cmake_object_order_depends_target_total
+  DEP_FILE = src/CMakeFiles/total.dir/InputClass.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include
+  OBJECT_DIR = src/CMakeFiles/total.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/total.dir
+
+build src/CMakeFiles/total.dir/ModelClass.cpp.o: CXX_COMPILER__total_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/src/ModelClass.cpp || cmake_object_order_depends_target_total
+  DEP_FILE = src/CMakeFiles/total.dir/ModelClass.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include
+  OBJECT_DIR = src/CMakeFiles/total.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/total.dir
+
+build src/CMakeFiles/total.dir/OpenGLClass.cpp.o: CXX_COMPILER__total_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/src/OpenGLClass.cpp || cmake_object_order_depends_target_total
+  DEP_FILE = src/CMakeFiles/total.dir/OpenGLClass.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include
+  OBJECT_DIR = src/CMakeFiles/total.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/total.dir
+
+build src/CMakeFiles/total.dir/SystemClass.cpp.o: CXX_COMPILER__total_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/src/SystemClass.cpp || cmake_object_order_depends_target_total
+  DEP_FILE = src/CMakeFiles/total.dir/SystemClass.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include
+  OBJECT_DIR = src/CMakeFiles/total.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/total.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target total
+
+
+#############################################
+# Link the static library src/libtotal.a
+
+build src/libtotal.a: CXX_STATIC_LIBRARY_LINKER__total_Debug src/CMakeFiles/total.dir/ApplicationClass.cpp.o src/CMakeFiles/total.dir/CameraClass.cpp.o src/CMakeFiles/total.dir/ColorShaderClass.cpp.o src/CMakeFiles/total.dir/InputClass.cpp.o src/CMakeFiles/total.dir/ModelClass.cpp.o src/CMakeFiles/total.dir/OpenGLClass.cpp.o src/CMakeFiles/total.dir/SystemClass.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/CMakeFiles/total.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = src/libtotal.a
+  TARGET_PDB = total.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/src && /opt/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/edit_cache: phony src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/src && /opt/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/l4zy9uy/Desktop/opengl/Engine2 -B/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/l4zy9uy/Desktop/opengl/Engine2/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Engine2
+
+
+#############################################
+# Order-only phony target for Engine2
+
+build cmake_object_order_depends_target_Engine2: phony || cmake_object_order_depends_target_glad cmake_object_order_depends_target_total
+
+build final/CMakeFiles/Engine2.dir/main.cpp.o: CXX_COMPILER__Engine2_unscanned_Debug /home/l4zy9uy/Desktop/opengl/Engine2/final/main.cpp || cmake_object_order_depends_target_Engine2
+  DEP_FILE = final/CMakeFiles/Engine2.dir/main.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include/glad -I/home/l4zy9uy/Desktop/opengl/Engine2/src/../include
+  OBJECT_DIR = final/CMakeFiles/Engine2.dir
+  OBJECT_FILE_DIR = final/CMakeFiles/Engine2.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Engine2
+
+
+#############################################
+# Link the executable final/Engine2
+
+build final/Engine2: CXX_EXECUTABLE_LINKER__Engine2_Debug final/CMakeFiles/Engine2.dir/main.cpp.o | src/libglad.a src/libtotal.a /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libGLU.so || src/libglad.a src/libtotal.a
+  FLAGS = -g
+  LINK_LIBRARIES = src/libglad.a  src/libtotal.a  /usr/lib/x86_64-linux-gnu/libSM.so  /usr/lib/x86_64-linux-gnu/libICE.so  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libGLU.so
+  OBJECT_DIR = final/CMakeFiles/Engine2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = final/Engine2
+  TARGET_PDB = Engine2.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build final/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/final && /opt/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build final/edit_cache: phony final/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build final/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/final && /opt/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/l4zy9uy/Desktop/opengl/Engine2 -B/home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build final/rebuild_cache: phony final/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
+
+build Engine2: phony final/Engine2
+
+build glad: phony src/libglad.a
+
+build libglad.a: phony src/libglad.a
+
+build libtotal.a: phony src/libtotal.a
+
+build total: phony src/libtotal.a
 
 # =============================================================================
 # Folder targets.
@@ -148,7 +279,21 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug
 
-build all: phony Engine2
+build all: phony src/all final/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/final
+
+build final/all: phony final/Engine2
+
+# =============================================================================
+
+#############################################
+# Folder: /home/l4zy9uy/Desktop/opengl/Engine2/cmake-build-debug/src
+
+build src/all: phony src/libglad.a src/libtotal.a
 
 # =============================================================================
 # Built-in targets
@@ -157,14 +302,14 @@ build all: phony Engine2
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/l4zy9uy/Desktop/opengl/Engine2/CMakeLists.txt /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFontconfig.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFreetype.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenGL.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPkgConfig.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/SelectLibraryConfigurations.cmake /usr/share/cmake/glm/glmConfig.cmake /usr/share/cmake/glm/glmConfigVersion.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/l4zy9uy/Desktop/opengl/Engine2/CMakeLists.txt /home/l4zy9uy/Desktop/opengl/Engine2/final/CMakeLists.txt /home/l4zy9uy/Desktop/opengl/Engine2/src/CMakeLists.txt /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFontconfig.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFreetype.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenGL.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPkgConfig.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/l4zy9uy/Desktop/opengl/Engine2/CMakeLists.txt /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFontconfig.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFreetype.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenGL.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPkgConfig.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/SelectLibraryConfigurations.cmake /usr/share/cmake/glm/glmConfig.cmake /usr/share/cmake/glm/glmConfigVersion.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build /home/l4zy9uy/Desktop/opengl/Engine2/CMakeLists.txt /home/l4zy9uy/Desktop/opengl/Engine2/final/CMakeLists.txt /home/l4zy9uy/Desktop/opengl/Engine2/src/CMakeLists.txt /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFontconfig.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFreetype.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenGL.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPkgConfig.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /opt/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################

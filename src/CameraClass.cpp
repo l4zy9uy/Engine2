@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "CameraClass.h"
+#include "../include/CameraClass.h"
 #include <glm/gtx/string_cast.hpp>
 
 CameraClass::CameraClass() : m_position(0), m_rotation(0), m_viewMatrix(0) { }

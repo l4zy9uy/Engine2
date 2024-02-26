@@ -1,9 +1,8 @@
 ///////////////////////
 // MY CLASS INCLUDES //
 ///////////////////////
-#include "SystemClass.h"
+#include "../include/SystemClass.h"
 #include <memory>
-
 //////////////////
 // MAIN PROGRAM //
 //////////////////

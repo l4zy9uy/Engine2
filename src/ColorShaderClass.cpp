@@ -2,7 +2,7 @@
 // Created by l4zy9uy on 2/17/24.
 //
 
-#include "ColorShaderClass.h"
+#include "../include/ColorShaderClass.h"
 #include <fstream>
 #include <glm/gtc/type_ptr.hpp>
 ColorShaderClass::ColorShaderClass()
@@ -24,8 +24,8 @@ bool ColorShaderClass::Initialize(std::shared_ptr<OpenGLClass> &OpenGL)
     m_OpenGLPtr = OpenGL;
 
     // Set the location and names of the shader files.
-    strcpy(vsFilename, "../color.vs");
-    strcpy(psFilename, "../color.ps");
+    strcpy(vsFilename, "/home/l4zy9uy/Desktop/opengl/Engine2/color.vs");
+    strcpy(psFilename, "/home/l4zy9uy/Desktop/opengl/Engine2/color.ps");
 
     // Initialize the vertex and pixel shaders.
     return InitializeShader(vsFilename, psFilename);
@@ -268,15 +268,12 @@ bool ColorShaderClass::SetShaderParameters(glm::mat4 &worldMatrix, glm::mat4 &vi
     glm::mat4 tpWorldMatrix(1), tpViewMatrix(1), tpProjectionMatrix(1);
 
     // Transpose the matrices to prepare them for the shader.
-//    m_OpenGLPtr->MatrixTranspose(tpWorldMatrix, worldMatrix);
-//    m_OpenGLPtr->MatrixTranspose(tpViewMatrix, viewMatrix);
-//    m_OpenGLPtr->MatrixTranspose(tpProjectionMatrix, projectionMatrix);
-    tpWorldMatrix = glm::transpose(worldMatrix);
+    /*tpWorldMatrix = glm::transpose(worldMatrix);
     tpViewMatrix = glm::transpose(viewMatrix);
-    tpProjectionMatrix = glm::transpose(projectionMatrix);
-    /*tpWorldMatrix = worldMatrix;
+    tpProjectionMatrix = glm::transpose(projectionMatrix);*/
+    tpWorldMatrix = worldMatrix;
     tpViewMatrix = viewMatrix;
-    tpProjectionMatrix = projectionMatrix;*/
+    tpProjectionMatrix = projectionMatrix;
 
     // Install the shader program as part of the current rendering state.
     m_OpenGLPtr->glUseProgram(m_shaderProgram);

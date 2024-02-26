@@ -94,7 +94,6 @@ public:
     const glm::mat4 &getMProjectionMatrix() const;
     const glm::mat4 &getMOrthoMatrix() const;
 
-    void MatrixTranspose(glm::mat4 &, glm::mat4 &);
     void TurnZBufferOn();
     void TurnZBufferOff();
     void EnableAlphaBlending();

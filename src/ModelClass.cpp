@@ -2,7 +2,7 @@
 // Created by l4zy9uy on 2/17/24.
 //
 
-#include "ModelClass.h"
+#include "../include/ModelClass.h"
 
 ModelClass::ModelClass()
 = default;
@@ -47,15 +47,15 @@ bool ModelClass::InitializeBuffers() {
     vertices[0].color = glm::vec3(0.0f, 0.0f, 1.0f);
     vertices[1].position = glm::vec3(1.0f, 1.0f, 0.0f);
     vertices[1].color = glm::vec3(0.0f, 1.0f, 0.0f);
-    vertices[2].position = glm::vec3(2.0f, -2.0f, 0.0f);
+    vertices[2].position = glm::vec3(3.0f, -1.0f, 0.0f);
     vertices[2].color = glm::vec3(1.0f, 1.0f, 0.0f);
     /*vertices[3].position = glm::vec3(-1.0f, 1.0f, 0.0f);
     vertices[3].color = glm::vec3(1.0f, 0.0f, 0.0f);*/
 
     // Load the index array with data.
-    indices[0] = 0;  // Bottom left.
-    indices[1] = 2;  // Top middle.
-    indices[2] = 1;  // Bottom right.
+    indices[0] = 2;  // Bottom left.
+    indices[1] = 1;  // Top middle.
+    indices[2] = 0;  // Bottom right.
     /*indices[3] = 0;  // Bottom right.
     indices[4] = 3;  // Bottom right.
     indices[5] = 1;  // Bottom right.*/
